@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+ }
+ *, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+ }
+ :focus, :active {
+	outline: none;
+ }
+ a:focus, a:active {
+	outline: none;
+ }
+ nav, footer, header, aside {
+	display: block;
+ }
+ html, body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+ }
+ input, button, textarea {
+	font-family: inherit;
+ }
+ input::-ms-clear {
+	display: none;
+ }
+ button {
+	cursor: pointer;
+ }
+ button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+ }
+ a, a:visited {
+	text-decoration: none;
+ }
+ a:hover {
+	text-decoration: none;
+ }
+ ul li {
+	list-style: none;
+ }
+ img {
+	vertical-align: top;
+ }
+
+/*--------------------*/
+
+
+body{
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main{
+	display: flex;
+	height: 600px;
+}
+.container {
+	border: 3px solid black;
+	height: 80vh;
+	margin: 47px 131px;
+	padding: 40px 40px;
+	border-radius: 64px;
+	font-size: 20px;
+	position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo{
+	font-size: 30px;
+	font-weight: 600;
+	color: #757575;
+	margin-bottom: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+.plus{
+	cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li{
+	margin-bottom: 10px;
+	display: flex;
+	gap: 15px;
+	cursor: pointer;
+	height: 40px;
+	align-items: center;
+	padding-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+li:hover{
+	background-color: #f0f0f059;
+	border-radius: 50px;
+}
+.circle1 {
+	background-color: #d2ceff;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.circle2 {
+	background-color: #d1e5f7;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.circle3{
+	background-color: #ffcece;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+.circle4 {
+	background-color: #daf2d6;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.hide_done{
+	margin-top: 60px;
+	color: #b7b4a7;
+	display: flex;
+	gap: 15px;
+}
+.image {
+	margin-top: 40px;
+}
+
+label{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+label::before{
+	content: '';
+	border: 1px solid #b7b4a7;
+	width: 28px;
+	height: 28px;
+	border-radius: 8px;
+	margin-right: 10px;
+}
+.custom_checkbox:checked+label::before{
+	background-image: url('./assets/image/icon.png');
+	background-repeat: no-repeat;
+}
+.custom_checkbox{
+	cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	width: 30px;
+	height: 30px;
+}
+
+.custom_color1{
+	color: black;
+}
+
+.aside{
+	margin-right: 50px;
+}
+.block{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px;
+	width: 1258px;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.color {
+	
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 30px;
+}
+	.color--lavanda {
+	  background-color: #D2CEFF;
+	}
+
+	.color--blue {
+	  background-color: #D1E5F7;
+	}
+
+	.color--pink {
+	  background-color: #FFCECE;
+	}
+
+	.color--green {
+	  background-color: #DAF2D6;
+	}
+
+.disable{
+	pointer-events: none;
+	opacity: 0.5;
 }
